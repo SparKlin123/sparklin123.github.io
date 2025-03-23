@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparKlin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-100 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-500">SparKlin</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html#home" class="text-gray-600 hover:text-blue-500">Home</a></li>
+                <li><a href="index.html#about" class="text-gray-600 hover:text-blue-500">About Us</a></li>
+                <li><a href="index.html#services" class="text-gray-600 hover:text-blue-500">Services</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative text-center py-32 bg-cover bg-center"
+        style="background-image: url('https://img.harianjogja.com/posts/2024/09/08/1186042/laundry-services.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 max-w-2xl mx-auto">
+            <h2 class="text-5xl font-extrabold text-white">Solution For Your Dirty Clothes</h2>
+            <p class="text-gray-200 mt-4 text-lg">SparKlin committed to delivering fresh, clean, and hygienic laundry
+                for your comfort</p>
+            <div class="mt-8">
+                <a href="#services" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">Get
+                    Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why SparKlin Section -->
+    <section class="py-16 text-center">
+        <h3 class="text-3xl font-semibold text-blue-500 mb-6">Why SparKlin?</h3>
+        <div class="max-w-2xl mx-auto">
+            <ul class="text-center text-gray-600 mb-6 space-y-4">
+                <li>✔️ Fresh and hygienic cleaning</li>
+                <li>✔️ Affordable pricing</li>
+                <li>✔️ Fast delivery times</li>
+            </ul>
+            <a href="#services" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">Buy
+                Now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-semibold text-blue-500 mb-8">Our Various Services</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Service 1: Washing -->
+                <div onclick="openModal('washing')"
+                    class="cursor-pointer bg-white shadow-lg rounded-lg overflow-hidden border-t-4 border-blue-400 transition hover:shadow-2xl">
+                    <img src="https://img.harianjogja.com/posts/2024/09/08/1186042/laundry-services.jpg"
+                        alt="Washing Service" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-700">Washing</h4>
+                        <p class="text-gray-600 mt-2">Efficient washing for your everyday clothes.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2: Ironing -->
+                <div onclick="openModal('ironing')"
+                    class="cursor-pointer bg-white shadow-lg rounded-lg overflow-hidden border-t-4 border-blue-400 transition hover:shadow-2xl">
+                    <img src="https://bakerscentrelaundry.com/wp-content/uploads/2024/01/shutterstock_619767104-768x5121-1.jpg"
+                        alt="Ironing Service" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-700">Ironing</h4>
+                        <p class="text-gray-600 mt-2">Perfect ironing for wrinkle-free clothes.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3: Dry Cleaning -->
+                <div onclick="openModal('dryCleaning')"
+                    class="cursor-pointer bg-white shadow-lg rounded-lg overflow-hidden border-t-4 border-blue-400 transition hover:shadow-2xl">
+                    <img src="https://paramatex.com/wp-content/uploads/2023/05/paramatex-dry-cleaning.jpg"
+                        alt="Dry Cleaning Service" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-700">Dry Cleaning</h4>
+                        <p class="text-gray-600 mt-2">Safe and gentle dry cleaning for delicate fabrics.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Limited Time Offer Section -->
+    <section class="bg-blue-100 py-16 text-center">
+        <h3 class="text-3xl font-semibold text-blue-500 mb-6">Limited Time Offer!</h3>
+        <p class="text-xl font-semibold text-gray-700">Rp. 600.000 → <span class="text-red-500">Rp. 420.000</span></p>
+        <p class="text-gray-600 mt-4">Become a member now and get 28% off! Use code <span
+                class="font-bold text-blue-500">SPARKLING</span></p>
+        <div class="mt-6">
+            <a href="form.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">Learn
+                More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-gray-200 text-gray-600">
+        &copy; 2025 SparKlin. All rights reserved.
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96 text-center">
+            <h3 id="modal-title" class="text-xl font-bold text-gray-800"></h3>
+            <p id="modal-description" class="text-gray-600 mt-2"></p>
+            <ul id="modal-benefits" class="text-left text-gray-600 mt-4 list-disc pl-6"></ul>
+            <button onclick="closeModal()"
+                class="mt-4 bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
