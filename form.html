@@ -24,27 +24,27 @@
     </nav>
 
     <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md my-12">
-        <h2 class="text-3xl font-semibold text-center text-blue-500 mb-6">Laundry Pickup Form</h2>
+        <h2 class="text-3xl font-semibold text-center text-blue-500 mb-6">Service Form</h2>
 
         <form action="#" method="POST">
 
             <!-- Name -->
             <div class="mb-4">
-                <label for="name" class="block text-gray-700 font-semibold">Nama:</label>
+                <label for="name" class="block text-gray-700 font-semibold">Name:</label>
                 <input type="text" id="name" name="name" required
                     class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <!-- Phone Number -->
             <div class="mb-4">
-                <label for="phone" class="block text-gray-700 font-semibold">No. Telp:</label>
+                <label for="phone" class="block text-gray-700 font-semibold">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required
                     class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <!-- Address -->
             <div class="mb-4">
-                <label for="address" class="block text-gray-700 font-semibold">Alamat:</label>
+                <label for="address" class="block text-gray-700 font-semibold">Address:</label>
                 <textarea id="address" name="address" required
                     class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     rows="3"></textarea>
@@ -52,55 +52,26 @@
 
             <!-- Laundry Type -->
             <div class="mb-4">
-                <label for="laundryType" class="block text-gray-700 font-semibold">Tipe Laundry:</label>
+                <label for="laundryType" class="block text-gray-700 font-semibold">Service Type:</label>
                 <select id="laundryType" name="laundryType" required
                     class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option value="washing">Washing</option>
                     <option value="ironing">Ironing</option>
                     <option value="dryCleaning">Dry Cleaning</option>
+                    <option value="dryCleaning">Home Cleaning</option>
                 </select>
             </div>
 
             <!-- Pickup Date & Time -->
             <div class="mb-4">
-                <label for="pickup" class="block text-gray-700 font-semibold">Tanggal & Jam Pickup:</label>
-                <div class="grid grid-cols-3 gap-4 mt-2">
-                    <div>
-                        <input type="radio" id="monday" name="pickup" value="Monday" class="mr-2">
-                        <label for="monday" class="text-gray-700">Senin</label>
-                        <select name="mondayTime" class="mt-2 p-2 w-full border border-gray-300 rounded-md">
-                            <option value="08:00">08:00</option>
-                            <option value="10:00">10:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="16:00">16:00</option>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="radio" id="wednesday" name="pickup" value="Wednesday" class="mr-2">
-                        <label for="wednesday" class="text-gray-700">Rabu</label>
-                        <select name="wednesdayTime" class="mt-2 p-2 w-full border border-gray-300 rounded-md">
-                            <option value="08:00">08:00</option>
-                            <option value="10:00">10:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="16:00">16:00</option>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="radio" id="friday" name="pickup" value="Friday" class="mr-2">
-                        <label for="friday" class="text-gray-700">Jumat</label>
-                        <select name="fridayTime" class="mt-2 p-2 w-full border border-gray-300 rounded-md">
-                            <option value="08:00">08:00</option>
-                            <option value="10:00">10:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="16:00">16:00</option>
-                        </select>
-                    </div>
-                </div>
+                <label for="pickup" class="block text-gray-700 font-semibold">Date and Time:</label>
+                <input type="datetime-local" id="pickup" name="pickup" required
+                    class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <!-- Referral Code (Optional) -->
             <div class="mb-4">
-                <label for="referralCode" class="block text-gray-700 font-semibold">Kode Referal (Optional):</label>
+                <label for="referralCode" class="block text-gray-700 font-semibold">Referal Code (Optional):</label>
                 <input type="text" id="referralCode" name="referralCode"
                     class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>

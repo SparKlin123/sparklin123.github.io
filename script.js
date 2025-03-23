@@ -28,6 +28,14 @@ function openModal(service) {
                     <li>Stain removal without damage</li>
                     <li>Fast and efficient service</li>
                 `;
+    } else if (service === 'homeCleaning') {
+        title.innerText = 'Home Cleaning Service';
+        description.innerText = 'Our home cleaning service ensures your home is spotless and fresh, with attention to detail in every corner.';
+        benefits.innerHTML = `
+                    <li>Comprehensive cleaning for every room</li>
+                    <li>Uses eco-friendly cleaning products</li>
+                    <li>Flexible scheduling</li>
+                `;
     }
 
     modal.classList.remove('hidden');
